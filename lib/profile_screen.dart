@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
         children: [
           Image.asset('assets/beach.jpg'),
           Transform.translate(
-            offset: Offset(0, 100),
+            offset: const Offset(0, 100),
             child: Column(
               children: [
                 _buildProfileImage(context),
@@ -25,7 +25,7 @@ class ProfileScreen extends StatelessWidget {
   }
 
   Widget _buildProfileImage(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 200,
       height: 200,
       child: ClipOval(
@@ -43,7 +43,7 @@ class ProfileScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Wolfram Barkovich',
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
           ),
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
       children: [
         Text(
           '$heading: ',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         Text(value)
       ],
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
 
   Widget _buildIcon(IconData icon, String text) {
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         children: [Icon(icon), Text(text)],
       ),
