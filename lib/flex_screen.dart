@@ -10,16 +10,18 @@ class FlexScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flexible and Expanded'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ..._header(context, 'Expanded'),
-          _buildExpanded(context),
-          ..._header(context, 'Flexible'),
-          _buildFlexible(context),
-          Expanded(child: Container()),
-          _buildFooter(context),
-        ],
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ..._header(context, 'Expanded'),
+            _buildExpanded(context),
+            ..._header(context, 'Flexible'),
+            _buildFlexible(context),
+            Expanded(child: Container()),
+            _buildFooter(context),
+          ],
+        ),
       ),
     );
   }

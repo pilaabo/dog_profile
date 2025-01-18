@@ -1,3 +1,4 @@
+import 'package:dog_profile/star.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -47,6 +48,7 @@ class ProfileScreen extends StatelessWidget {
             'Wolfram Barkovich',
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
           ),
+          const StarRating(value: 5),
           _buildDetailsRow('Age', '4'),
           _buildDetailsRow('Status', 'Good boy'),
         ],
